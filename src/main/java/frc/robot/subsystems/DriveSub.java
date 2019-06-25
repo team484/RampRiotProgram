@@ -29,4 +29,9 @@ public class DriveSub extends Subsystem {
     double rate = (leftRate * rightRate) / 2.0;
     return rate;
   }
+
+  public static void set(double speed, double rot)
+  {
+    RobotIO.difDrive.arcadeDrive(speed, rot);
+  }
 }

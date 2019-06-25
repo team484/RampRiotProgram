@@ -21,5 +21,8 @@ public class RobotSettings {
     public static final int LEFT_ENCODER_ID_B = 2;
     public static final int RIGHT_ENCODER_ID_A = 3;
     public static final int RIGHT_ENCODER_ID_B = 4;
-    public static final int DRIVER_STICK_ID = 0;  
+    public static final int DRIVER_STICK_ID = 0;
+    public static final int DIF_DRIVE_ID = 0;
+    public static double DESIRED_DISTANCE = 0;
+  
 }

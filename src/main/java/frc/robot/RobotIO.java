@@ -12,6 +12,7 @@ import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 
 /**
  * Add your docs here.
@@ -26,5 +27,6 @@ public class RobotIO {
     public static Encoder leftEncoder = new Encoder(RobotSettings.LEFT_ENCODER_ID_A, RobotSettings.LEFT_ENCODER_ID_B);
     public static Encoder rightEncoder = new Encoder(RobotSettings.RIGHT_ENCODER_ID_A, RobotSettings.RIGHT_ENCODER_ID_B);
     public static Joystick driverStick = new Joystick(RobotSettings.DRIVER_STICK_ID);
+    public static DifferentialDrive difDrive = new DifferentialDrive(leftMotor1, rightMotor2);
 
 }
