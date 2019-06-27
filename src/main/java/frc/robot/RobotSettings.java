@@ -24,5 +24,12 @@ public class RobotSettings {
     public static final int DRIVER_STICK_ID = 0;
     public static final int DIF_DRIVE_ID = 0;
     public static double DESIRED_DISTANCE = 0;
+    public static final int FRONT_CLIMBER_SOLENOID_FORWARD_ID = 0;
+    public static final int FRONT_CLIMBER_SOLENOID_REVERSE_ID = 1;
+    public static final int BACK_CLIMBER_SOLENOID_FORWARD_ID = 2;
+    public static final int BACK_CLIMBER_SOLENOID_REVERSE_ID = 3;
+    public static final int BUTTON_6_ID = 6;
+    public static final int BUTTON_7_ID = 7;
+
   
 }

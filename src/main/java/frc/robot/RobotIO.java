@@ -10,8 +10,11 @@ package frc.robot;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 
 /**
@@ -28,5 +31,9 @@ public class RobotIO {
     public static Encoder rightEncoder = new Encoder(RobotSettings.RIGHT_ENCODER_ID_A, RobotSettings.RIGHT_ENCODER_ID_B);
     public static Joystick driverStick = new Joystick(RobotSettings.DRIVER_STICK_ID);
     public static DifferentialDrive difDrive = new DifferentialDrive(leftMotor1, rightMotor2);
+    public static DoubleSolenoid frontSolenoid = new DoubleSolenoid(RobotSettings.FRONT_CLIMBER_SOLENOID_FORWARD_ID, RobotSettings.FRONT_CLIMBER_SOLENOID_REVERSE_ID);
+    public static DoubleSolenoid backSolenoid = new DoubleSolenoid(RobotSettings.BACK_CLIMBER_SOLENOID_FORWARD_ID, RobotSettings.BACK_CLIMBER_SOLENOID_REVERSE_ID);
+    public static JoystickButton frontClimbButton = new JoystickButton(driverStick, 6);
+    public static JoystickButton backClimbButton = new JoystickButton(driverStick, 7);
 
 }
