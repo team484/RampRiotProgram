@@ -21,15 +21,54 @@ public class RobotSettings {
     public static final int LEFT_ENCODER_ID_B = 2;
     public static final int RIGHT_ENCODER_ID_A = 3;
     public static final int RIGHT_ENCODER_ID_B = 4;
-    public static final int DRIVER_STICK_ID = 0;
+    public static final int DRIVER_STICK_PORT = 0;
+    public static final int BALL_STICK_PORT = 1;
+    public static final int HATCH_STICK_PORT = 2;
     public static final int DIF_DRIVE_ID = 0;
     public static double DESIRED_DISTANCE = 0;
     public static final int FRONT_CLIMBER_SOLENOID_FORWARD_ID = 0;
     public static final int FRONT_CLIMBER_SOLENOID_REVERSE_ID = 1;
     public static final int BACK_CLIMBER_SOLENOID_FORWARD_ID = 2;
     public static final int BACK_CLIMBER_SOLENOID_REVERSE_ID = 3;
-    public static final int BUTTON_6_ID = 6;
-    public static final int BUTTON_7_ID = 7;
+    public static final int DRIVERSTICK_BUTTON_1_ID = 1;
+    public static final int DRIVERSTICK_BUTTON_2_ID = 2;
+    public static final int DRIVERSTICK_BUTTON_3_ID = 3;
+    public static final int DRIVERSTICK_BUTTON_4_ID = 4;
+    public static final int DRIVERSTICK_BUTTON_5_ID = 5;
+    public static final int DRIVERSTICK_BUTTON_6_ID = 6;
+    public static final int DRIVERSTICK_BUTTON_7_ID = 7;
+    public static final int DRIVERSTICK_BUTTON_8_ID = 8;
+    public static final int DRIVERSTICK_BUTTON_9_ID = 9;
+    public static final int DRIVERSTICK_BUTTON_10_ID = 10;
+    public static final int DRIVERSTICK_BUTTON_11_ID = 11;
+    public static final int DRIVERSTICK_BUTTON_12_ID = 12;
+    public static final int BALLSTICK_BUTTON_1_ID = 1;
+    public static final int BALLSTICK_BUTTON_2_ID = 2;
+    public static final int BALLSTICK_BUTTON_3_ID = 3;
+    public static final int BALLSTICK_BUTTON_4_ID = 4;
+    public static final int BALLSTICK_BUTTON_5_ID = 5;
+    public static final int BALLSTICK_BUTTON_6_ID = 6;
+    public static final int BALLSTICK_BUTTON_7_ID = 7;
+    public static final int BALLSTICK_BUTTON_8_ID = 8;
+    public static final int BALLSTICK_BUTTON_9_ID = 9;
+    public static final int BALLSTICK_BUTTON_10_ID = 10;
+    public static final int BALLSTICK_BUTTON_11_ID = 11;
+    public static final int BALLSTICK_BUTTON_12_ID = 12;
+    public static final int HATCHSTICK_BUTTON_1_ID = 13;
+    public static final int HATCHSTICK_BUTTON_2_ID = 14;
+    public static final int HATCHSTICK_BUTTON_3_ID = 15;
+    public static final int HATCHSTICK_BUTTON_4_ID = 16;
+    public static final int HATCHSTICK_BUTTON_5_ID = 17;
+    public static final int HATCHSTICK_BUTTON_6_ID = 18;
+    public static final int HATCHSTICK_BUTTON_7_ID = 19;
+    public static final int HATCHSTICK_BUTTON_8_ID = 20;
+    public static final int HATCHSTICK_BUTTON_9_ID = 21;
+    public static final int HATCHSTICK_BUTTON_10_ID = 22;
+    public static final int HATCHSTICK_BUTTON_11_ID = 23;
+    public static final int HATCHSTICK_BUTTON_12_ID = 24;
+    
+    
+
 
   
 }
