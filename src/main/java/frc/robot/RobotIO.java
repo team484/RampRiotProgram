@@ -10,12 +10,19 @@ package frc.robot;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
+
+import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+import sun.management.Sensor;
 
 /**
  * Add your docs here.
@@ -70,8 +77,15 @@ public class RobotIO {
     public static JoystickButton hatchStickButton10 = new JoystickButton(operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_10_ID);
     public static JoystickButton hatchStickButton11 = new JoystickButton(operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_11_ID);
     public static JoystickButton hatchStickButton12 = new JoystickButton(operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_12_ID);
+    public static AnalogInput intakeSensor = new AnalogInput(RobotSettings.INTAKE_SENSOR_CHANNEL);
+    public static WPI_TalonSRX intakeMotor = new WPI_TalonSRX(RobotSettings.INTAKE_MOTOR_ID);
+    public static AnalogInput shooterSensor = new AnalogInput(RobotSettings.SHOOTER_SENSOR_CHANNEL);
+    public static WPI_TalonSRX shooterWheels = new WPI_TalonSRX(RobotSettings.SHOOTER_MOTOR_ID);
+    public static DoubleSolenoid intakeSolenoid = new DoubleSolenoid(RobotSettings.INTAKE_SOLENOID_FORWARD_ID, RobotSettings.INTAKE_SOLENOID_BACKWARD_ID);
     
-
-
-
 }
+
+
+    
+    
+        

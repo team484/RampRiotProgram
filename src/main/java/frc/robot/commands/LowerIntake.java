@@ -7,36 +7,31 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.command.Command;
-import frc.robot.Robot;
 import frc.robot.RobotIO;
-import frc.robot.RobotSettings;
-import frc.robot.subsystems.DriveSub;
 
-public class DriveUntillDistance extends Command {
-  public DriveUntillDistance() {
+public class LowerIntake extends Command {
+  public LowerIntake() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
-    requires(Robot.driveSub);
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    DriveSub.set(1, 0);
-    
+    RobotIO.intakeSolenoid.set(Value.kForward);
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
-    return RobotSettings.DESIRED_DISTANCE == RobotIO.leftEncoder.getDistance();
+    return false;
   }
 
   // Called once after isFinished returns true
