@@ -22,7 +22,6 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-import sun.management.Sensor;
 
 /**
  * Add your docs here.
@@ -55,9 +54,10 @@ public class RobotIO {
     public static JoystickButton driveButton11 = new JoystickButton(driverStick, RobotSettings.DRIVERSTICK_BUTTON_11_ID);
     public static JoystickButton ballStickButton1 = new JoystickButton(operatorStickBall, RobotSettings.BALLSTICK_BUTTON_1_ID);
     public static JoystickButton ballStickButton2 = new JoystickButton(operatorStickBall, RobotSettings.BALLSTICK_BUTTON_2_ID);
-    public static JoystickButton ballStickButton3 = new JoystickButton(operatorStickBall, RobotSettings.BALLSTICK_BUTTON_3_ID);
+    public static JoystickButton storeCargoButton = new JoystickButton(operatorStickBall, RobotSettings.BALLSTICK_BUTTON_3_ID);
     public static JoystickButton ballStickButton4 = new JoystickButton(operatorStickBall, RobotSettings.BALLSTICK_BUTTON_4_ID);
-    public static JoystickButton ballStickButton5 = new JoystickButton(operatorStickBall, RobotSettings.BALLSTICK_BUTTON_5_ID);
+    public static JoystickButton grabCargoButton = new JoystickButton(operatorStickBall, RobotSettings.BALLSTICK_BUTTON_5_ID);
+    //This button sucks balls
     public static JoystickButton ballStickButton6 = new JoystickButton(operatorStickBall, RobotSettings.BALLSTICK_BUTTON_6_ID);
     public static JoystickButton ballStickButton7 = new JoystickButton(operatorStickBall, RobotSettings.BALLSTICK_BUTTON_7_ID);
     public static JoystickButton ballStickButton8 = new JoystickButton(operatorStickBall, RobotSettings.BALLSTICK_BUTTON_8_ID);

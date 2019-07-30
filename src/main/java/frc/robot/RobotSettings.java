@@ -7,13 +7,12 @@
 
 package frc.robot;
 
-import com.sun.tools.classfile.StackMapTable_attribute.same_frame;
-import com.sun.tools.classfile.StackMapTable_attribute.stack_map_frame;
 
 /**
  * Add your docs here.
  */
 public class RobotSettings {
+    public static final double INTAKE_SPEED = 1;
     public static final int LEFT_MOTOR_1_ID = 1;
     public static final int LEFT_MOTOR_2_ID = 2;
     public static final int LEFT_MOTOR_3_ID = 3;
@@ -71,8 +70,8 @@ public class RobotSettings {
     public static final int HATCHSTICK_BUTTON_10_ID = 22;
     public static final int HATCHSTICK_BUTTON_11_ID = 23;
     public static final int HATCHSTICK_BUTTON_12_ID = 24;
-    public static final int INTAKE_SENSOR_CHANNEL = 0;
-    public static final int SHOOTER_SENSOR_CHANNEL = 1;
+    public static final int INTAKE_SENSOR_CHANNEL = 1;
+    public static final int SHOOTER_SENSOR_CHANNEL =0;
     public static final int INTAKE_SOLENOID_FORWARD_ID = 4;
     public static final int INTAKE_SOLENOID_BACKWARD_ID = 5; 
     

@@ -9,6 +9,8 @@ package frc.robot;
 
 import frc.robot.commands.BackClimber;
 import frc.robot.commands.FrontClimber;
+import frc.robot.commands.IntakePrepareToShoot;
+import frc.robot.commands.IntakeSuccTheBalls;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -44,9 +46,12 @@ public class OI {
   // button.whenReleased(new ExampleCommand());
   public OI()
   {
-    RobotIO.driveButton1.whenPressed(new );
+    
     RobotIO.frontClimbButton.toggleWhenPressed(new FrontClimber());
     RobotIO.backClimbButton.toggleWhenPressed(new BackClimber());
+    RobotIO.grabCargoButton.whenPressed(new IntakeSuccTheBalls());
+    RobotIO.storeCargoButton.whenPressed(new IntakePrepareToShoot());
+
 
   }
 }

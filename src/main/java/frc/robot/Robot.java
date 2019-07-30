@@ -14,6 +14,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.JoystickDrive;
 import frc.robot.subsystems.DriveSub;
+import frc.robot.subsystems.IntakeSub;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -23,6 +24,7 @@ import frc.robot.subsystems.DriveSub;
  * project.
  */
 public class Robot extends TimedRobot {
+  public static IntakeSub intakeSub = new IntakeSub();
   public static DriveSub driveSub = new DriveSub();
   public static OI m_oi;
   public static RobotIO robotIO = new RobotIO();
@@ -40,6 +42,7 @@ public class Robot extends TimedRobot {
     m_chooser.setDefaultOption("Default Auto", new JoystickDrive());
     // chooser.addOption("My Auto", new MyAutoCommand());
     SmartDashboard.putData("Auto mode", m_chooser);
+    SmartDashboard.putData(robotIO.intakeSensor);  
   }
 
   /**
@@ -66,6 +69,7 @@ public class Robot extends TimedRobot {
   @Override
   public void disabledPeriodic() {
     Scheduler.getInstance().run();
+
   }
 
   /**
