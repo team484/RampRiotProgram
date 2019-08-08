@@ -74,7 +74,8 @@ public class RobotSettings {
     public static final int SHOOTER_SENSOR_CHANNEL =0;
     public static final int INTAKE_SOLENOID_FORWARD_ID = 4;
     public static final int INTAKE_SOLENOID_BACKWARD_ID = 5;
-    public static final int BALL_IN_SENSOR_VOLTAGE = 1;
+    public static final double BALL_IN_SENSOR_VOLTAGE = 1.0;
+    public static final double INTAKE_EMPTY_VOLTAGE = 0.8;
     public static final int SHOOTER_MOTOR_SPEED = 1;
     
 
