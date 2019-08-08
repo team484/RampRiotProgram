@@ -8,31 +8,17 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
-import frc.robot.RobotIO;
-import frc.robot.commands.JoystickDrive;
 
 /**
  * Add your docs here.
  */
-public class DriveSub extends Subsystem {
+public class BackClimberSub extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    setDefaultCommand(new JoystickDrive());
-     
-  }
-  public static double getRate() {
-    double leftRate = RobotIO.leftEncoder.getRate();
-    double rightRate = RobotIO.rightEncoder.getRate();
-    double rate = (leftRate * rightRate) / 2.0;
-    return rate;
-  }
-
-  public static void set(double speed, double rot)
-  {
-    RobotIO.difDrive.arcadeDrive(speed, rot);
+    // setDefaultCommand(new MySpecialCommand());
   }
 }

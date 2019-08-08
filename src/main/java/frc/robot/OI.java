@@ -7,6 +7,7 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.robot.commands.BackClimber;
 import frc.robot.commands.FrontClimber;
 import frc.robot.commands.IntakePrepareToShoot;
@@ -17,40 +18,49 @@ import frc.robot.commands.IntakeSuccTheBalls;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
-  //// CREATING BUTTONS
-  // One type of button is a joystick button which is any button on a
-  //// joystick.
-  // You create one by telling it which joystick it's on and which button
-  // number it is.
-  // Joystick stick = new Joystick(port);
-  // Button button = new JoystickButton(stick, buttonNumber);
-
-  // There are a few additional built in buttons you can use. Additionally,
-  // by subclassing Button you can create custom triggers and bind those to
-  // commands the same as any other Button.
-
-  //// TRIGGERING COMMANDS WITH BUTTONS
-  // Once you have a button, it's trivial to bind it to a button in one of
-  // three ways:
-
-  // Start the command when the button is pressed and let it run the command
-  // until it is finished as determined by it's isFinished method.
-  // button.whenPressed(new ExampleCommand());
-
-  // Run the command while the button is being held down and interrupt it once
-  // the button is released.
-  // button.whileHeld(new ExampleCommand());
-
-  // Start the command when the button is released and let it run the command
-  // until it is finished as determined by it's isFinished method.
-  // button.whenReleased(new ExampleCommand());
+  public static JoystickButton driveButton1 = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_1_ID);
+  public static JoystickButton driveButton2 = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_2_ID);
+  public static JoystickButton driveButton3 = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_3_ID);
+  public static JoystickButton driveButton4 = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_4_ID);
+  public static JoystickButton driveButton5 = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_5_ID);
+  public static JoystickButton frontClimbButton = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_6_ID);
+  public static JoystickButton backClimbButton = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_7_ID);
+  public static JoystickButton driveButton8 = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_8_ID);
+  public static JoystickButton driveButton9 = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_9_ID);
+  public static JoystickButton driveButton10 = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_10_ID);
+  public static JoystickButton driveButton11 = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_11_ID);
+  public static JoystickButton ballStickButton1 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_1_ID);
+  public static JoystickButton ballStickButton2 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_2_ID);
+  public static JoystickButton storeCargoButton = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_3_ID);
+  public static JoystickButton ballStickButton4 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_4_ID);
+  public static JoystickButton grabCargoButton = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_5_ID);
+  //This button sucks balls
+  public static JoystickButton ballStickButton6 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_6_ID);
+  public static JoystickButton ballStickButton7 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_7_ID);
+  public static JoystickButton ballStickButton8 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_8_ID);
+  public static JoystickButton ballStickButton9 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_9_ID);
+  public static JoystickButton ballStickButton10 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_10_ID);
+  public static JoystickButton ballStickButton11 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_11_ID);
+  public static JoystickButton ballStickButton12 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_12_ID);
+  public static JoystickButton hatchStickButton1 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_1_ID);
+  public static JoystickButton hatchStickButton2 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_2_ID);
+  public static JoystickButton hatchStickButton3 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_3_ID);
+  public static JoystickButton hatchStickButton4 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_4_ID);
+  public static JoystickButton hatchStickButton5 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_5_ID);
+  public static JoystickButton hatchStickButton6 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_6_ID);
+  public static JoystickButton hatchStickButton7 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_7_ID);
+  public static JoystickButton hatchStickButton8 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_8_ID);
+  public static JoystickButton hatchStickButton9 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_9_ID);
+  public static JoystickButton hatchStickButton10 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_10_ID);
+  public static JoystickButton hatchStickButton11 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_11_ID);
+  public static JoystickButton hatchStickButton12 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_12_ID);
   public OI()
   {
     
-    RobotIO.frontClimbButton.toggleWhenPressed(new FrontClimber());
-    RobotIO.backClimbButton.toggleWhenPressed(new BackClimber());
-    RobotIO.grabCargoButton.whenPressed(new IntakeSuccTheBalls());
-    RobotIO.storeCargoButton.whenPressed(new IntakePrepareToShoot());
+    frontClimbButton.toggleWhenPressed(new FrontClimber());
+    backClimbButton.toggleWhenPressed(new BackClimber());
+    grabCargoButton.whenPressed(new IntakeSuccTheBalls());
+    storeCargoButton.whenPressed(new IntakePrepareToShoot());
 
 
   }

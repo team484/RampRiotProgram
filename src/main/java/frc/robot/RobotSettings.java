@@ -12,7 +12,7 @@ package frc.robot;
  * Add your docs here.
  */
 public class RobotSettings {
-    public static final double INTAKE_SPEED = 1;
+    public static final int INTAKE_SPEED = 1;
     public static final int LEFT_MOTOR_1_ID = 1;
     public static final int LEFT_MOTOR_2_ID = 2;
     public static final int LEFT_MOTOR_3_ID = 3;
@@ -58,22 +58,24 @@ public class RobotSettings {
     public static final int BALLSTICK_BUTTON_10_ID = 10;
     public static final int BALLSTICK_BUTTON_11_ID = 11;
     public static final int BALLSTICK_BUTTON_12_ID = 12;
-    public static final int HATCHSTICK_BUTTON_1_ID = 13;
-    public static final int HATCHSTICK_BUTTON_2_ID = 14;
-    public static final int HATCHSTICK_BUTTON_3_ID = 15;
-    public static final int HATCHSTICK_BUTTON_4_ID = 16;
-    public static final int HATCHSTICK_BUTTON_5_ID = 17;
-    public static final int HATCHSTICK_BUTTON_6_ID = 18;
-    public static final int HATCHSTICK_BUTTON_7_ID = 19;
-    public static final int HATCHSTICK_BUTTON_8_ID = 20;
-    public static final int HATCHSTICK_BUTTON_9_ID = 21;
-    public static final int HATCHSTICK_BUTTON_10_ID = 22;
-    public static final int HATCHSTICK_BUTTON_11_ID = 23;
-    public static final int HATCHSTICK_BUTTON_12_ID = 24;
+    public static final int HATCHSTICK_BUTTON_1_ID = 1;
+    public static final int HATCHSTICK_BUTTON_2_ID = 2;
+    public static final int HATCHSTICK_BUTTON_3_ID = 3;
+    public static final int HATCHSTICK_BUTTON_4_ID = 4;
+    public static final int HATCHSTICK_BUTTON_5_ID = 5;
+    public static final int HATCHSTICK_BUTTON_6_ID = 6;
+    public static final int HATCHSTICK_BUTTON_7_ID = 7;
+    public static final int HATCHSTICK_BUTTON_8_ID = 8;
+    public static final int HATCHSTICK_BUTTON_9_ID = 9;
+    public static final int HATCHSTICK_BUTTON_10_ID = 10;
+    public static final int HATCHSTICK_BUTTON_11_ID = 11;
+    public static final int HATCHSTICK_BUTTON_12_ID = 12;
     public static final int INTAKE_SENSOR_CHANNEL = 1;
     public static final int SHOOTER_SENSOR_CHANNEL =0;
     public static final int INTAKE_SOLENOID_FORWARD_ID = 4;
-    public static final int INTAKE_SOLENOID_BACKWARD_ID = 5; 
+    public static final int INTAKE_SOLENOID_BACKWARD_ID = 5;
+    public static final int BALL_IN_SENSOR_VOLTAGE = 1;
+    public static final int SHOOTER_MOTOR_SPEED = 1;
     
 
 

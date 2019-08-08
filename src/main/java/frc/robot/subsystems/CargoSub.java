@@ -8,6 +8,7 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.RobotIO;
 
 /**
  * Add your docs here.
@@ -21,4 +22,9 @@ public class CargoSub extends Subsystem {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
   }
+  public static void Set (double speed)
+  {
+    RobotIO.shooterWheels.set(speed);
+  }
+
 }

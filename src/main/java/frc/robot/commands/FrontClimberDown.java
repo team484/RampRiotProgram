@@ -11,8 +11,8 @@ import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.RobotIO;
 
-public class FrontClimber extends Command {
-  public FrontClimber() {
+public class FrontClimberDown extends Command {
+  public FrontClimberDown() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
   }
@@ -20,21 +20,18 @@ public class FrontClimber extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    RobotIO.frontSolenoid.set(Value.kForward);
+    RobotIO.frontSolenoid.set(Value.kReverse);
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    
-
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
     return false;
-    
   }
 
   // Called once after isFinished returns true

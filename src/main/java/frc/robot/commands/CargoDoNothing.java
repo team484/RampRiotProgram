@@ -7,12 +7,12 @@
 
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.RobotIO;
+import frc.robot.subsystems.CargoSub;
 
-public class FrontClimber extends Command {
-  public FrontClimber() {
+public class CargoDoNothing extends Command {
+  public CargoDoNothing() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
   }
@@ -20,21 +20,18 @@ public class FrontClimber extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    RobotIO.frontSolenoid.set(Value.kForward);
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    
-
+    CargoSub.Set(0);
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
     return false;
-    
   }
 
   // Called once after isFinished returns true
@@ -46,6 +43,5 @@ public class FrontClimber extends Command {
   // subsystems is scheduled to run
   @Override
   protected void interrupted() {
-    end();
   }
 }

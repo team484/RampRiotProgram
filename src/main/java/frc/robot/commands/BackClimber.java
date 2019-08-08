@@ -20,12 +20,13 @@ public class BackClimber extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
+    RobotIO.backSolenoid.set(Value.kForward);
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    RobotIO.backSolenoid.set(Value.kForward);
+    
   }
 
   // Make this return true when this Command no longer needs to run execute()
