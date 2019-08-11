@@ -9,11 +9,11 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
 
-public class IntakeSuccTheBalls extends CommandGroup {
+public class LoadCargo extends CommandGroup {
   /**
    * Add your docs here.
    */
-  public IntakeSuccTheBalls() {
+  public LoadCargo() {
     // Add Commands here:
     // e.g. addSequential(new Command1());
     // addSequential(new Command2());
@@ -30,12 +30,9 @@ public class IntakeSuccTheBalls extends CommandGroup {
     // e.g. if Command1 requires chassis, and Command2 requires arm,
     // a CommandGroup containing them would require both the chassis and the
     // arm.
-    addSequential(new LowerIntake());
     addParallel(new IntakeSpinWheels());
-    
-    
-    
-    
-    
-  }
+    addParallel(new RaiseIntake());
+    addSequential(new CargoLoader());
+    addSequential(new IntakeDoNothing());
+  } 
 }

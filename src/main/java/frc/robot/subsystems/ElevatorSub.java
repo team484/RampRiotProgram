@@ -8,6 +8,8 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.Robot;
+import frc.robot.RobotIO;
 
 /**
  * Add your docs here.
@@ -20,5 +22,10 @@ public class ElevatorSub extends Subsystem {
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
+  }
+  public static void Set(double speed)
+  {
+    RobotIO.elevatorMotor1.set(speed);
+    RobotIO.elevatorMotor2.set(speed * (-1));
   }
 }

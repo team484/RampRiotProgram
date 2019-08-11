@@ -7,16 +7,15 @@
 
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.command.Command;
-import frc.robot.Robot;
 import frc.robot.RobotIO;
+import frc.robot.RobotSettings;
+import frc.robot.subsystems.ElevatorSub;
 
-public class RaiseIntake extends Command {
-  public RaiseIntake() {
+public class RaiseToLow extends Command {
+  public RaiseToLow() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
-    requires(Robot.intakeSub);
   }
 
   // Called just before this Command runs the first time
@@ -27,13 +26,13 @@ public class RaiseIntake extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    RobotIO.intakeSolenoid.set(Value.kReverse);
+    ElevatorSub.Set(RobotSettings.ELEVATOR_SPEED);
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
-    return false;
+    return RobotIO.elevatorMotor1.getEncoder().getPosition() >= RobotSettings.LOW_BALL_HEIGHT;
   }
 
   // Called once after isFinished returns true

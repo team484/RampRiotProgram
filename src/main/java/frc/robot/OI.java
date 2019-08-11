@@ -10,11 +10,16 @@ package frc.robot;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.robot.commands.BackClimber;
 import frc.robot.commands.BackClimberDown;
+import frc.robot.commands.CargoShooter;
 import frc.robot.commands.FrontClimber;
 import frc.robot.commands.FrontClimberDown;
-import frc.robot.commands.IntakePrepareToShoot;
+import frc.robot.commands.IntakeDoNothing;
+import frc.robot.commands.IntakeSpinWheels;
 import frc.robot.commands.IntakeSuccTheBalls;
-import frc.robot.commands.ShootCargo;
+import frc.robot.commands.LoadCargo;
+import frc.robot.commands.LowerIntake;
+import frc.robot.commands.RaiseIntake;
+
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -33,7 +38,7 @@ public class OI {
   public static JoystickButton frontClimbDownButton = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_10_ID);
   public static JoystickButton backClimbDownButton = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_11_ID);
   public static JoystickButton cargoShootButton = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_1_ID);
-  public static JoystickButton ballStickButton2 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_2_ID);
+  public static JoystickButton lowerIntakeButton = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_2_ID);
   public static JoystickButton storeCargoButton = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_3_ID);
   public static JoystickButton ballStickButton4 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_4_ID);
   public static JoystickButton grabCargoButton = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_5_ID);
@@ -64,7 +69,12 @@ public class OI {
     backClimbButton.whenPressed(new BackClimber());
     frontClimbDownButton.whenPressed(new FrontClimberDown());
     backClimbDownButton.whenPressed(new BackClimberDown());
-    grabCargoButton.whenPressed(new IntakeSuccTheBalls());
+    lowerIntakeButton.whileHeld(new IntakeSuccTheBalls());
+    lowerIntakeButton.whenReleased(new LoadCargo());
+    grabCargoButton.whenPressed(new IntakeSpinWheels());
+    ballStickButton12.whenPressed(new IntakeDoNothing());
+    cargoShootButton.whenPressed(new CargoShooter());
+    
 
 
 

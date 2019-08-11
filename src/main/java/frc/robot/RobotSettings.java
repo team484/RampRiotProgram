@@ -13,6 +13,7 @@ package frc.robot;
  */
 public class RobotSettings {
     public static final int INTAKE_SPEED = 1;
+    public static final double ELEVATOR_SPEED = 1;
     public static final int LEFT_MOTOR_1_ID = 1;
     public static final int LEFT_MOTOR_2_ID = 2;
     public static final int LEFT_MOTOR_3_ID = 3;
@@ -21,6 +22,8 @@ public class RobotSettings {
     public static final int RIGHT_MOTOR_3_ID = 6;
     public static final int INTAKE_MOTOR_ID = 1;
     public static final int SHOOTER_MOTOR_ID = 2;
+    public static final int ELEVATOR_MOTOR_1_ID = 7;
+    public static final int ELEVATOR_MOTOR_2_ID = 8;    
     public static final int LEFT_ENCODER_ID_A = 1;
     public static final int LEFT_ENCODER_ID_B = 2;
     public static final int RIGHT_ENCODER_ID_A = 3;
@@ -76,7 +79,13 @@ public class RobotSettings {
     public static final int INTAKE_SOLENOID_BACKWARD_ID = 5;
     public static final double BALL_IN_SENSOR_VOLTAGE = 1.0;
     public static final double INTAKE_EMPTY_VOLTAGE = 0.8;
-    public static final int SHOOTER_MOTOR_SPEED = 1;
+    public static final double SHOOTER_MOTOR_SPEED = 1;
+    public static final double LOW_BALL_HEIGHT = 1;
+    public static final double MID_BALL_HEIGHT = 1;
+    public static final double HIGH_BALL_HEIGHT = 1;
+    public static final double LOW_HATCH_HEIGHT = 1;
+    public static final double MID_HATCH_HEIGHT = 1;
+    public static final double HIGH_HATCH_HEIGHT = 1;
     
 
 

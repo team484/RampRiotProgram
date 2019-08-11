@@ -46,7 +46,8 @@ public class RobotIO {
     public static AnalogInput shooterSensor = new AnalogInput(RobotSettings.SHOOTER_SENSOR_CHANNEL);
     public static WPI_TalonSRX shooterWheels = new WPI_TalonSRX(RobotSettings.SHOOTER_MOTOR_ID);
     public static DoubleSolenoid intakeSolenoid = new DoubleSolenoid(RobotSettings.INTAKE_SOLENOID_FORWARD_ID, RobotSettings.INTAKE_SOLENOID_BACKWARD_ID);
-    
+    public static CANSparkMax elevatorMotor1 = new CANSparkMax(RobotSettings.ELEVATOR_MOTOR_1_ID, MotorType.kBrushless);
+    public static CANSparkMax elevatorMotor2 = new CANSparkMax(RobotSettings.ELEVATOR_MOTOR_2_ID, MotorType.kBrushless);
 }
 
 

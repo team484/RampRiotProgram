@@ -7,16 +7,14 @@
 
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.command.Command;
-import frc.robot.Robot;
 import frc.robot.RobotIO;
+import frc.robot.subsystems.ElevatorSub;
 
-public class RaiseIntake extends Command {
-  public RaiseIntake() {
+public class ElevatorJoystickControl extends Command {
+  public ElevatorJoystickControl() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
-    requires(Robot.intakeSub);
   }
 
   // Called just before this Command runs the first time
@@ -27,7 +25,7 @@ public class RaiseIntake extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    RobotIO.intakeSolenoid.set(Value.kReverse);
+    ElevatorSub.Set(RobotIO.operatorStickBall.getY());
   }
 
   // Make this return true when this Command no longer needs to run execute()

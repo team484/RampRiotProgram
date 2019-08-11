@@ -32,7 +32,7 @@ public class CargoShooter extends Command {
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
-    return RobotIO.shooterSensor.getVoltage() >= RobotSettings.BALL_IN_SENSOR_VOLTAGE;
+    return RobotIO.shooterSensor.getVoltage() <= RobotSettings.INTAKE_EMPTY_VOLTAGE;
   }
 
   // Called once after isFinished returns true

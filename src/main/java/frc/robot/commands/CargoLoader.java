@@ -10,6 +10,7 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.RobotIO;
 import frc.robot.RobotSettings;
+import frc.robot.subsystems.CargoSub;
 
 public class CargoLoader extends Command {
   public CargoLoader() {
@@ -25,14 +26,14 @@ public class CargoLoader extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    RobotIO.shooterWheels.set(RobotSettings.SHOOTER_MOTOR_SPEED);
+    CargoSub.Set(RobotSettings.SHOOTER_MOTOR_SPEED);
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
     
-    return false;
+    return RobotIO.shooterSensor.getVoltage() >= RobotSettings.BALL_IN_SENSOR_VOLTAGE;
   }
 
   // Called once after isFinished returns true

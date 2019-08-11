@@ -8,16 +8,14 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-import frc.robot.Robot;
 import frc.robot.RobotIO;
 import frc.robot.RobotSettings;
-import frc.robot.subsystems.CargoSub;
+import frc.robot.subsystems.ElevatorSub;
 
-public class CargoPrepareToShoot extends Command {
-  public CargoPrepareToShoot() {
+public class RaiseToMidHatch extends Command {
+  public RaiseToMidHatch() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
-    
   }
 
   // Called just before this Command runs the first time
@@ -28,14 +26,13 @@ public class CargoPrepareToShoot extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    CargoSub.Set(RobotSettings.SHOOTER_MOTOR_SPEED);
+    ElevatorSub.Set(RobotSettings.ELEVATOR_SPEED);
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
-    return RobotIO.shooterSensor.getVoltage() >= RobotSettings.BALL_IN_SENSOR_VOLTAGE;
-
+    return RobotIO.elevatorMotor1.getEncoder().getPosition() >= RobotSettings.MID_HATCH_HEIGHT;
   }
 
   // Called once after isFinished returns true
