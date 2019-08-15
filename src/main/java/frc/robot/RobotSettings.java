@@ -37,6 +37,12 @@ public class RobotSettings {
     public static final int FRONT_CLIMBER_SOLENOID_REVERSE_ID = 1;
     public static final int BACK_CLIMBER_SOLENOID_FORWARD_ID = 2;
     public static final int BACK_CLIMBER_SOLENOID_REVERSE_ID = 3;
+    public static final int INTAKE_SOLENOID_FORWARD_ID = 4;
+    public static final int INTAKE_SOLENOID_BACKWARD_ID = 5;
+    public static final int HATCH_GRABBER_EXTEND_ID = 6;
+    public static final int HATCH_GRABBER_RETRACT_ID = 7;
+    public static final int HATCH_GRABBER_ARM_EXTEND_ID = 8;
+    public static final int HATCH_GRABBER_ARM_RETRACT_ID = 9;
     public static final int DRIVERSTICK_BUTTON_1_ID = 1;
     public static final int DRIVERSTICK_BUTTON_2_ID = 2;
     public static final int DRIVERSTICK_BUTTON_3_ID = 3;
@@ -75,8 +81,6 @@ public class RobotSettings {
     public static final int HATCHSTICK_BUTTON_12_ID = 12;
     public static final int INTAKE_SENSOR_CHANNEL = 1;
     public static final int SHOOTER_SENSOR_CHANNEL =0;
-    public static final int INTAKE_SOLENOID_FORWARD_ID = 4;
-    public static final int INTAKE_SOLENOID_BACKWARD_ID = 5;
     public static final double BALL_IN_SENSOR_VOLTAGE = 1.0;
     public static final double INTAKE_EMPTY_VOLTAGE = 0.8;
     public static final double SHOOTER_MOTOR_SPEED = 1;

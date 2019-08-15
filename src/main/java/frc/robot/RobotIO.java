@@ -48,6 +48,8 @@ public class RobotIO {
     public static DoubleSolenoid intakeSolenoid = new DoubleSolenoid(RobotSettings.INTAKE_SOLENOID_FORWARD_ID, RobotSettings.INTAKE_SOLENOID_BACKWARD_ID);
     public static CANSparkMax elevatorMotor1 = new CANSparkMax(RobotSettings.ELEVATOR_MOTOR_1_ID, MotorType.kBrushless);
     public static CANSparkMax elevatorMotor2 = new CANSparkMax(RobotSettings.ELEVATOR_MOTOR_2_ID, MotorType.kBrushless);
+    public static DoubleSolenoid hatchGrabber = new DoubleSolenoid(RobotSettings.HATCH_GRABBER_EXTEND_ID, RobotSettings.HATCH_GRABBER_RETRACT_ID);
+    public static DoubleSolenoid hatchGrabberARM = new DoubleSolenoid(RobotSettings.HATCH_GRABBER_ARM_EXTEND_ID, RobotSettings.HATCH_GRABBER_ARM_RETRACT_ID);
 }
 
 
