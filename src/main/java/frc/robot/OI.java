@@ -19,6 +19,7 @@ import frc.robot.commands.IntakeSuccTheBalls;
 import frc.robot.commands.LoadCargo;
 import frc.robot.commands.LowerIntake;
 import frc.robot.commands.RaiseIntake;
+import frc.robot.commands.ReleaseHatch;
 
 
 /**
@@ -50,6 +51,7 @@ public class OI {
   public static JoystickButton ballStickButton10 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_10_ID);
   public static JoystickButton ballStickButton11 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_11_ID);
   public static JoystickButton ballStickButton12 = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_12_ID);
+
   public static JoystickButton hatchStickButton1 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_1_ID);
   public static JoystickButton hatchStickButton2 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_2_ID);
   public static JoystickButton hatchStickButton3 = new JoystickButton(RobotIO.operatorStickHatch, RobotSettings.HATCHSTICK_BUTTON_3_ID);
@@ -74,6 +76,10 @@ public class OI {
     grabCargoButton.whenPressed(new IntakeSpinWheels());
     ballStickButton12.whenPressed(new IntakeDoNothing());
     cargoShootButton.whenPressed(new CargoShooter());
+    hatchGrabButton.whenPressed(new GrabHatch());
+    hatchReleaseButton.whenPressed(new ReleaseHatch());
+
+    
     
 
 
