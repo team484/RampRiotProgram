@@ -16,6 +16,8 @@ import frc.robot.commands.FrontClimberDown;
 import frc.robot.commands.IntakeDoNothing;
 import frc.robot.commands.IntakeSpinWheels;
 import frc.robot.commands.IntakeSuccTheBalls;
+import frc.robot.commands.JostickDriveHalfSpeed;
+import frc.robot.commands.JoystickDrive;
 import frc.robot.commands.LoadCargo;
 import frc.robot.commands.LowerIntake;
 import frc.robot.commands.RaiseIntake;
@@ -35,7 +37,7 @@ public class OI {
   public static JoystickButton frontClimbButton = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_6_ID);
   public static JoystickButton backClimbButton = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_7_ID);
   public static JoystickButton driveButton8 = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_8_ID);
-  public static JoystickButton driveButton9 = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_9_ID);
+  public static JoystickButton driveHalfSpeedButton = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_9_ID);
   public static JoystickButton frontClimbDownButton = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_10_ID);
   public static JoystickButton backClimbDownButton = new JoystickButton(RobotIO.driverStick, RobotSettings.DRIVERSTICK_BUTTON_11_ID);
   public static JoystickButton cargoShootButton = new JoystickButton(RobotIO.operatorStickBall, RobotSettings.BALLSTICK_BUTTON_1_ID);
@@ -78,7 +80,7 @@ public class OI {
     cargoShootButton.whenPressed(new CargoShooter());
     hatchGrabButton.whenPressed(new GrabHatch());
     hatchReleaseButton.whenPressed(new ReleaseHatch());
-
+    driveHalfSpeedButton.toggleWhenPressed(new JostickDriveHalfSpeed());
     
     
 
