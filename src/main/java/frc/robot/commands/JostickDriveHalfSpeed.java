@@ -25,11 +25,7 @@ public class JostickDriveHalfSpeed extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    DriveSub.set(RobotIO.driverStick.getY(), RobotIO.driverStick.getX());
-    if (RobotIO.driverStick.getY() >= .50)
-    {
-      DriveSub.set(50, RobotIO.driverStick.getX());
-    }
+    DriveSub.set(RobotIO.driverStick.getY() / 2.0, RobotIO.driverStick.getX() / 2.0);
   }
 
   // Make this return true when this Command no longer needs to run execute()
